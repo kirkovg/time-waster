@@ -14,7 +14,7 @@ timeWaster.addEventListener('mouseenter', () => {
 
 timeWaster.addEventListener('click', () => {
   const t1 = performance.now();
-  const minutesSpent = (t1 - t0) / 60000;
+  const minutesSpent = +((t1 - t0) / 60000).toFixed(1);
   window.alert(`You just spent ${minutesSpent} of your life trying to click a stupid button that does nothing.`);
 });
 
