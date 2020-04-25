@@ -3,11 +3,11 @@ const width = window.innerWidth || document.documentElement.clientWidth || docum
 const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 const t0 = performance.now();
 
-const getRandom = (min, max) => Math.random() * (max - min) + min;
+const getRandom = (number) => Math.random() * number;
 
 timeWaster.addEventListener('mouseenter', () => {
-  const newTop = getRandom(0, height);
-  const newLeft = getRandom(0, width);
+  const newTop = getRandom(height);
+  const newLeft = getRandom(width);
   timeWaster.style.marginTop = newTop + 'px';
   timeWaster.style.marginLeft = newLeft + 'px';
 });
